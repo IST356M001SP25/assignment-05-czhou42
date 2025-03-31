@@ -23,3 +23,4 @@ Examples:
 
 `--- Reflection Below This Line ---`
 
+I had trouble recalling the exact time of day.When working with timestamps that contain both date and time, use the strptime() format. I should do more practice with datetime formatting in Python.

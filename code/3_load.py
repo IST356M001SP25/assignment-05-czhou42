@@ -40,5 +40,17 @@ def upload_file(file_name, bucket_name, object_name=None):
     return True
 
 if __name__ == '__main__':
-    #TODO: Write your load code here (remove pass first)
-    pass
+    BUCKET = "ist356yournetid"  # replace with your NetID
+
+    files = [
+        "cache/survey_dataset.csv",
+        "cache/annual_salary_adjusted_by_location_and_age.csv",
+        "cache/annual_salary_adjusted_by_location_and_education.csv"
+    ]
+
+    for file in files:
+        result = upload_file(file, BUCKET, os.path.basename(file))
+        if result:
+            print(f"Uploaded {file} successfully")
+        else:
+            print(f"Failed to upload {file}")
